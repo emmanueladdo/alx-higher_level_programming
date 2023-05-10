@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for i in 'abcdefghijklmnopqrstuvwxyz':
-    print(f"{i}", end="")
+for character in range(97, 123):
+    print(f"{character:c}", end="")
