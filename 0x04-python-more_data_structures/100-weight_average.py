@@ -4,4 +4,4 @@ def weight_average(my_list=[]):
         return 0
     i = list(map(list, zip(*my_list)))
     w = [x * y for x, y in zip(i[0], i[1])]
-    return sum(i) / sum(w[1])
+    return sum(w) / sum(i[1])
