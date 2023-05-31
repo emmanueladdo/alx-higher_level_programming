@@ -11,7 +11,7 @@ Methods comparisons between Square objects and their sizes.
 
 
 class Square:
-    """A class that defines a square by size and can compute area"""
+    """class that defines a square by size and can compute area"""
     def __init__(self, size=0):
         self.size = size
 
@@ -22,7 +22,7 @@ class Square:
     @size.setter
     def size(self, size):
         if type(size) != int:
-            raise TypeError("size must be an integer")
+            raise TypeError("size must be an number")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
