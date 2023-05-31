@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-This is a "Square"  module.
+This is the "Square"  module.
 
-The module provides a simplei Square class with initialize size.
-Default size is 0. Raise error on invalid size inputs.
+This module provides a simple Square class with initialize size.
+Defaults size to 0. Raise error on invalid size inputs.
 Attribute position which takes a default (0, 0) tuple.
 Methods Getter and Setter properties for size and position.
 Method area returns size of area of the square.
@@ -14,7 +14,7 @@ Method __repr__ should return the string to print out the square.
 
 
 class Square:
-    """Class that defines a square by size, which defaults 0.
+    """A class that defines a square by size, which defaults 0.
     Also defines position using a tuple, which defaults (0, 0).
     Square can also get area, and print square using '#'.
     When printing, using position, offset on top and left.
@@ -28,12 +28,12 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, value):
-        if not isinstance(value, int):
+    def size(self, size):
+        if type(size) != int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        self.__size = size
 
     @property
     def position(self):
@@ -41,20 +41,30 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2 or \
-                not all(isinstance(num, int) for num in value) or \
-                not all(num >= 0 for num in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value) != tuple or len(value) != 2 or \
+           not all([type(i) == int for i in value]):
+            raise TypeError("position must be a tuple of 2 positive integer")
         self.__position = value
 
+    def __repr__(self):
+        return (self.get_str())
+
     def area(self):
-        return self.size ** 2
+        return self.__size ** 2
+
+    def get_str(self):
+        total = ""
+        if self.__size is 0:
+            total += "\n"
+            return total
+        for i in range(self.__position[1]):
+            total += "\n"
+        for i in range(self.__size):
+            total += (" " * self.__position[0])
+            total += ("#" * self.__size)
+            if i is not (self.__size - 1):
+                total += "\n"
+        return total
 
     def my_print(self):
-        if self.size == 0:
-            print()
-        else:
-            for _ in range(self.position[1]):
-                print()
-            for _ in range(self.size):
-                print(" " * self.position[0] + "#" * self.size)
+        print(self.get_str())
