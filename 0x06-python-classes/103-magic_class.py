@@ -1,63 +1,45 @@
-#!/usr/bin/python3
 import math
 
 
 class MagicClass:
     """
-    A class representing a circle and providing methods to calculating its area
-    and circumference.
+    A class representing a magic circle.
 
     Attributes:
-        radius (float or int): The radius of the circle.
-
-    Methods:
-        __init__(self, radius=0): Initializes a MagicClass object with the
-        specified radius.
-        area(self): Calculates and returns the area of the circle.
-        circumference(self): Calculates and returns the circumference of the
-        circle.
+        __radius (float): The radius of the magic circle.
     """
 
-    def __init__(self, radius=0):
+    def __init__(self, radius):
         """
-        Initializes a MagicClass object with the specified radius.
+        Initialize a MagicClass instance with a given radius.
 
         Args:
-            radius (float or int): The radius of the circle. Default is 0.
+            radius (int or float): The radius of the magic circle.
 
         Raises:
-            TypeError: If the radius is not a number (float or int).
+            TypeError: If the radius is not a number.
         """
         self.__radius = 0
 
         if not isinstance(radius, (int, float)):
-            raise TypeError("radius must be a number")
+            raise TypeError('radius must be a number')
+
         self.__radius = radius
-
-    @property
-    def radius(self):
-        """
-        Getter method for the radius property.
-
-        Returns:
-            float or int: The radius of the circle.
-        """
-        return self.__radius
 
     def area(self):
         """
-        Calculates and returns the area of the circle.
+        Calculate the area of the magic circle.
 
         Returns:
-            float or int: The area of the circle.
+            float: The area of the magic circle.
         """
-        return self.__radius ** 2 * math.pi
+        return math.pi * self.__radius ** 2
 
     def circumference(self):
         """
-        Calculates and returns the circumference of the circle.
+        Calculate the circumference of the magic circle.
 
         Returns:
-            float or int: The circumference of the circle.
+            float: The circumference of the magic circle.
         """
         return 2 * math.pi * self.__radius
