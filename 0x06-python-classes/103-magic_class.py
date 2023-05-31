@@ -2,7 +2,7 @@
 import math
 """
 This is the "MagicClass" module.
-This provides a simple Magic Class cals circumference 
+This provides a simple MagicClass cals circumference 
 """
 
 class MagicClass:
