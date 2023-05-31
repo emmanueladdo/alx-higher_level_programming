@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-This is the "Square" Module.
+This is a "Square"  module.
 
-Module provides a simple Square class with initialize size.
-Defaults size to 0. Raise error on invalid size inputs.
+The module provides a simplei Square class with initialize size.
+Default size is 0. Raise error on invalid size inputs.
 Attribute position which takes a default (0, 0) tuple.
 Methods Getter and Setter properties for size and position.
 Method area returns size of area of the square.
@@ -47,12 +47,12 @@ class Square:
         self.__position = value
 
     def __repr__(self):
-        return (self.getstrg())
+        return (self.get_str())
 
     def area(self):
-        return self.__size * self.__size
+        return self.__size ** 2
 
-    def get_strg(self):
+    def get_str(self):
         total = ""
         if self.__size is 0:
             total += "\n"
@@ -67,4 +67,4 @@ class Square:
         return total
 
     def my_print(self):
-        print(self.get_strg())
+        print(self.get_str())
