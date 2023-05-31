@@ -11,7 +11,7 @@ class MagicClass:
         __radius (float): The radius of the magic circle.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """
         Initialize a MagicClass instance with a given radius.
 
@@ -35,7 +35,7 @@ class MagicClass:
         Returns:
             float: The area of the magic circle.
         """
-        return math.pi * self.__radius ** 2
+        return math.pi * (self.__radius ** 2)
 
     def circumference(self):
         """
