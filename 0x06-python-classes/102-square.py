@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 """
-This is the Square  module.
+This is the "Square"  module.
 
 This module provides a simple Square class with initialize size.
 Defaults size to 0. Raise error on invalid size inputs.
 Methods Getter and Setter properties for size.
 Method area returns size of area of the square.
-Methods comparisons between Square objects and their sizes.
+Methods __lt__, __le__, __eq__, __ne__, __gt__, __ge__
+comparisons between Square objects and their sizes.
 """
 
 
 class Square:
-    """class that defines a square by size and can compute area"""
+    """A class that defines a square by size and can compute area"""
     def __init__(self, size=0):
         self.size = size
 
@@ -28,22 +29,22 @@ class Square:
         self.__size = size
 
     def area(self):
-        return self.__size ** 2
+        return self.__size * self.__size
 
-    def __lestthan__(self, other):
+    def __lt__(self, other):
         return self.__size < other.size
 
-    def __lessequal__(self, other):
+    def __le__(self, other):
         return self.__size <= other.size
 
-    def __equal__(self, other):
+    def __eq__(self, other):
         return self.__size == other.size
 
-    def __notequal__(self, other):
+    def __ne__(self, other):
         return self.__size != other.size
 
-    def __greaterthan__(self, other):
+    def __gt__(self, other):
         return self.__size > other.size
 
-    def __greaterequal__(self, other):
+    def __ge__(self, other):
         return self.__size >= other.size
