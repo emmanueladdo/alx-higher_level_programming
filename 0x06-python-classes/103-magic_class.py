@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import math
-
+"""
+This is the "MagicClass" module.
+This provides a simple Magic Class cals circumference 
+"""
 
 class MagicClass:
     """
