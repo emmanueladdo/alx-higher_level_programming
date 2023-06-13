@@ -19,13 +19,6 @@ case 1: common case
 >>> print(my_list)
 [10, 40, 20, 30, 50]
 
-case 2: undefined object
->>> my_list2 = MyList()
->>> my_list2.print_sorted()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AttributeError: 'MyList' object has no attribute 'print_sorted'
-
 case 3: passed a list
 >>> a = [5, 3, 9]
 >>> my_list = MyList(a)
