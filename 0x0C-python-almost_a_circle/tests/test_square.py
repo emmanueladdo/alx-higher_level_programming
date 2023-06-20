@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# test_square.py
 """Defines unittests for models/square.py.
 
 Unittest classes:
@@ -86,7 +85,7 @@ class TestSquare_instantiation(unittest.TestCase):
 
 
 class TestSquare_size(unittest.TestCase):
-    """Unittests for testing size initialization of the Square class."""
+    """testing size initialization of the Square class."""
 
     def test_None_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -637,7 +636,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
 
 class TestSquare_to_dictionary(unittest.TestCase):
-    """Unittests for testing to_dictionary method of the Square class."""
+    """testing to_dictionary method of the Square class."""
 
     def test_to_dictionary_output(self):
         s = Square(10, 2, 1, 1)
@@ -654,6 +653,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()

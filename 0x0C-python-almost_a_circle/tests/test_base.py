@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#test_base.py
 """Defines unittests for base.py.
 
 Unittest classes:
@@ -20,7 +19,7 @@ from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
-    """Unittests for testing instantiation of the Base class."""
+    """testing instantiation of the Base class."""
 
     def test_no_arg(self):
         b1 = Base()
@@ -107,7 +106,7 @@ class TestBase_instantiation(unittest.TestCase):
 
 
 class TestBase_to_json_string(unittest.TestCase):
-    """Unittests for testing to_json_string method of Base class."""
+    """testing to_json_string method of Base class."""
 
     def test_to_json_string_rectangle_type(self):
         r = Rectangle(10, 7, 2, 8, 6)
@@ -544,6 +543,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -22,7 +22,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle_instantiation(unittest.TestCase):
-    """Unittests for testing instantiation of the Rectangle class."""
+    """testing instantiation of the Rectangle class."""
 
     def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
@@ -111,7 +111,7 @@ class TestRectangle_instantiation(unittest.TestCase):
 
 
 class TestRectangle_width(unittest.TestCase):
-    """Unittests for testing initialization of Rectangle width attribute."""
+    """testing initialization of Rectangle width attribute."""
 
     def test_None_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -802,6 +802,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
         r = Rectangle(10, 2, 4, 1, 2)
         with self.assertRaises(TypeError):
             r.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()
