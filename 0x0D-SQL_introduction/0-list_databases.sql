@@ -1,2 +1,2 @@
---script that all databases of my MySQL server
+--script that all databases of the MYQL server
 SHOW DATABASES;
