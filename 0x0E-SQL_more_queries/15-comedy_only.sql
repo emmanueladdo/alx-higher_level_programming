@@ -4,6 +4,6 @@
 SELECT tv_shows.title
 FROM tv_shows
 INNER JOIN tv_show_genres tv ON tv_shows.id = tv.show_id
-INNER JOIN tv_genres gn ON tv.genre_id = tv.id
+INNER JOIN tv_genres gn ON tv.genre_id = gn.id
 WHERE gn.name = 'Comedy'
 ORDER BY tv_shows.title ASC;
