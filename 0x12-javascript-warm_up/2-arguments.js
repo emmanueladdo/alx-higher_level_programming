@@ -2,6 +2,6 @@
 const argumentsNum = process.argv.length;
 if (argumentsNum > 2){
 	console.log('Argument found');
-}else{
+} else {
 	console.log('No argument');
 }
