@@ -7,4 +7,3 @@ if (argumentNum === 1) {
 } else {
 	console.log('No argument');
 }
-
