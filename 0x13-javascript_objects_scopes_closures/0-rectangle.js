@@ -2,4 +2,7 @@
 /**
  *Defines a rectangle class
  */
-module.export = class Rectangle {};
+class Rectangle {
+}
+
+module.export = Rectangle;
