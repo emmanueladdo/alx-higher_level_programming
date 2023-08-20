@@ -12,6 +12,6 @@ Base = declarative_base()
 
 class States(Base):
     """Class definition for state"""
-    __tablename__ = "states"
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(string(128), nullable=False)
