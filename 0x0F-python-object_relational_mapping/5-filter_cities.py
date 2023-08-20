@@ -14,7 +14,10 @@ if __name__ == "__main__":
                          db=argv[3])
     cursor = db.cursor()
     s_name = argv[4]
-    cursor.execute("SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %(name)s ORDER BY cities.id ASC", {'name': s_name})
+    cursor.execute("SELECT cities.name FROM cities"
+                   "JOIN states ON cities.state_id = states.id"
+                   "WHERE states.name = %(name)s"
+                   "ORDER BY cities.id ASC", {'name': s_name})
     cities = cursor.fetchall()
     print(", ".join(city[0] for city in cities))
     cursor.close()
