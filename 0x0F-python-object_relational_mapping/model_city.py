@@ -4,14 +4,18 @@ Class definition of a city
 And an instance Base = declarative
 """
 
+
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from model_state import Base
+from model_state import Base, State
 
 
 class City(Base):
-    """Represents a row in a cities table"""
+    """
+    City class that inherits from Base.
+    Represents a city in a state.
+    """
     __tablename__ = 'cities'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
