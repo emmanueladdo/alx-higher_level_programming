@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Adds the State object "Louisiana" to the database hbtn_0e_6_usa.
 """
@@ -15,8 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    new_state = State(name='Louisiana')
-    session.add(new_state)
+    new_obj = State(name='Louisiana')
+    session.add(new_obj)
     session.commit()
-    print(new_state.id)
+    print(new_obj.id)
     session.close()
