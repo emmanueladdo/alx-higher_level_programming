@@ -18,7 +18,7 @@ if __name__ == "__main__":
     s_name = argv[4]
     cursor.execute("SELECT * FROM states "
                    "WHERE name = %(name)s "
-                   "ORDER BY id ASC", {'name':s_name})
+                   "ORDER BY id ASC", {'name': s_name})
     for state in cursor.fetchall():
         print(state)
     cursor.close()
