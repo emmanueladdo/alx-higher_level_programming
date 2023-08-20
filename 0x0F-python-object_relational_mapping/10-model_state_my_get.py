@@ -16,14 +16,14 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
 
-    state_found = False
-    for state in session.query(State).filter(
-            State.name == sys.argv[4]).order_by(
-            State.id):
-        print(state.id)
-        state_found = True
-
-    if not state_found:
-        print("Not found")
-
-    session.close()
+    state_name = argv[4]
+    check = map(lambda x: x.isalpha() or (x in (' ', '%', '_')), state_name)
+    if not all(check):
+        state_name = ''
+    Base.metadata.create_all(engine)
+    session = sessionmaker(bind=engine)()
+    results = session.query(State).filter(State.name == state_name).first()
+    if results is None:
+        print('Not found')
+    else:
+        print('{}'.format(results.id))
