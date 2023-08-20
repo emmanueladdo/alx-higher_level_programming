@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 lists all the states from the database
-with the name starting Upper N
+that matches with argument passed
 """
 
 from sys import argv
