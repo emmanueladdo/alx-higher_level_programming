@@ -7,7 +7,7 @@ Database hbtn_0e_100_usa
 
 
 from sys import argv
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, and_, text, tuple_
 from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
