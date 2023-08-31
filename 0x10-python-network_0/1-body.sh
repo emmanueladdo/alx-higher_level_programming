@@ -1,4 +1,3 @@
 #!/bin/bash
-# Displays the body of the response of GET request to a URL
-#Till 200
+# Displays body of the response of GET request to a URL
 curl -sL "$1"
