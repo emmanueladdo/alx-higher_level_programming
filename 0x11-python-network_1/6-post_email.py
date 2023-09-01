@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""sends the POST request to the passed URL with the passed email as a parameter
+"""sends the POST request to the passed URL with the passed
+   email as a parameter
    displays the body of the response"""
 from sys import argv
 from requests import post
