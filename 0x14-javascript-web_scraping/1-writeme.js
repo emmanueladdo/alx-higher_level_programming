@@ -16,7 +16,8 @@ if (!filePath) {
   process.exit(1);
 }
 
-fs.writeFile(filePath, content, 'utf-8', (err, data) => {
+fs.writeFile(filePath, content, 'utf-8', (err) => {
   if (err) {
     console.error(err);
+  }
 });
