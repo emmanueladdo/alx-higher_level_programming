@@ -6,23 +6,17 @@
 
 const request = require('request');
 
-const ID = process.argv[2]; // Get the API URL from command line arguments
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
-const urlAPi = 'https://swapi-api.hbtn.io/api/films/'+ `${ID}`;
-if (!ID) {
-  console.error('Usage: ./100-starwars_characters.js <ID>');
-  process.exit(1);
-}
-
-request(url, (error, response, body) => {
-    if (error) console.log(error);
-    else {
-      const characters = JSON.parse(body).characters;
-      characters.forEach((character) => {
-        request(character, (error, response, body) => {
-          if (error) console.log(error);
-          else console.log(JSON.parse(body).name);
-        });
+request(url, function (error, response, body) {
+  if (error) console.log(error);
+  else {
+    const characters = JSON.parse(body).characters;
+    characters.forEach((character) => {
+      request(character, function (error, response, body) {
+        if (error) console.log(error);
+        else console.log(JSON.parse(body).name);
       });
-    }
-  });
+    });
+  }
+});
